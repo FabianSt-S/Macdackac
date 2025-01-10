@@ -1,0 +1,1 @@
+print("Open Discord.html or flask/template/main.html")
