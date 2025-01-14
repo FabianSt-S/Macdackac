@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termian Host - Moderne Hosting-Lösungen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e54c8;
+            --secondary-color: #8f94fb;
+            --background-gradient: linear-gradient(135deg, #4e54c8, #8f94fb);
+            --text-color-light: #F4F4F9;
+            --text-color-muted: #A5A6F6;
+            --card-bg: rgba(255, 255, 255, 0.2);
+            --button-hover: #ff914d;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--background-gradient);
+            color: var(--text-color-light);
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 10rem 2rem;
+            background: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+            color: var(--text-color-light);
+            box-shadow: 0 4px 20px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: rotateBackground 10s linear infinite;
+        }
+
+        @keyframes rotateBackground {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        header h1 {
+            font-size: 6rem;
+            font-weight: 800;
+            margin: 0;
+            background: var(--background-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(0, 0, 50, 0.7);
+            box-shadow: 0 2px 10px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--button-hover);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, #00121A, #001F33);
+            color: var(--text-color-light);
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px var(--shadow);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .hero button:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .service {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px var(--shadow);
+        }
+
+        .service h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--button-hover);
+        }
+
+        footer {
+            padding: 5rem 2rem;
+            background: #001F33;
+            color: var(--text-color-muted);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin-top: 2rem;
+        }
+
+        .footer-social a {
+            margin: 0 1rem;
+            color: var(--text-color-light);
+            font-size: 1.5rem;
+        }
+
+        .footer-social a:hover {
+            color: var(--button-hover);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Termian Host</h1>
+        <p>Innovative Hosting-Lösungen für die Zukunft</p>
+    </header>
+
+    <nav>
+        <a href="#services">Dienstleistungen</a>
+        <a href="#about">Über Uns</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Ermögliche deine digitalen Träume</h2>
+        <p>Nutze rasante Geschwindigkeit, unübertroffene Sicherheit und zukunftsweisende Technologie.</p>
+        <button>Jetzt starten</button>
+    </div>
+
+    <section id="services">
+        <h3>Unsere Dienstleistungen</h3>
+        <div class="services">
+            <div class="service">
+                <h4>Domains</h4>
+                <p>Flexible, sichere und skalierbare Lösungen, die auf dein Unternehmen zugeschnitten sind.</p>
+            </div>
+            <div class="service">
+                <h4>Game Server</h4>
+                <p>Leistungsstarke Infrastruktur mit vollständiger Kontrolle an deinen Fingerspitzen.</p>
+            </div>
+            <div class="service">
+                <h4>Web Server</h4>
+                <p>Unvergleichliche Leistung und exklusive Ressourcen für deine Anforderungen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h3>Über Uns</h3>
+        <p>Bei Termian Host definieren wir Hosting neu mit Innovation, Zuverlässigkeit und unvergleichlicher Geschwindigkeit. Sei Teil der Zukunft.</p>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#services">Dienstleistungen</a>
+            <a href="#about">Über Uns</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="impressum.html">Impressum</a>
+        </div>
+        <p>&copy; 2025 Termian Host. Alle Rechte vorbehalten.</p>
+        <div class="footer-social">
+            <a href="https://discord.termian-host.de"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
